@@ -25,7 +25,7 @@ body{
 .img-slider{
     width: 400%;
     display: flex;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 img{
     width: 25%;
@@ -47,7 +47,7 @@ footer{
     width: 400%;
     height: 100%;
     display: flex;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 .descr{
     width: 25%;
@@ -80,24 +80,115 @@ label{
     background: rgb(62, 138, 226);
 }
 
-input:checked ~ label>.label-point{
-    background:none;
-    border: 2px solid rgb(62, 138, 226);
-}
 label:hover>.label-point{
     background:white;
 }
 label:active>.label-point{
     background:rgb(195, 195, 195);
 }
-input:checked ~ label:hover>.label-point{
+
+
+
+
+
+
+#img_1:checked ~.img-container .img-slider{
+    margin-left: 0%;
+}
+#img_1:checked ~ footer .descr-container .descr-slider{
+    margin-left: 0%;
+}
+
+#img_1:checked ~ footer label[for="img_1"] > .label-point{
+    background:none;
+    border: 2px solid rgb(62, 138, 226);
+}
+
+#img_1:checked ~ footer label[for="img_1"]:hover > .label-point{
     background:none;
     border: 2px solid white;
 }
-input:checked ~ label:active>.label-point{
+
+#img_1:checked ~ footer label[for="img_1"]:active > .label-point{
     background:none;
-    border: 2px solid rgb(195, 195, 195);;
+    border: 2px solid rgb(195, 195, 195);
 }
+
+
+
+
+#img_2:checked ~.img-container .img-slider{
+    margin-left: -100%;
+}
+#img_2:checked ~ footer .descr-container .descr-slider{
+    margin-left: -100%;
+}
+
+#img_2:checked ~ footer label[for="img_2"] > .label-point{
+    background:none;
+    border: 2px solid rgb(62, 138, 226);
+}
+
+#img_2:checked ~ footer label[for="img_2"]:hover > .label-point{
+    background:none;
+    border: 2px solid white;
+}
+
+#img_2:checked ~ footer label[for="img_2"]:active > .label-point{
+    background:none;
+    border: 2px solid rgb(195, 195, 195);
+}
+
+
+
+
+#img_3:checked ~.img-container .img-slider{
+    margin-left: -200%;
+}
+#img_3:checked ~ footer .descr-container .descr-slider{
+    margin-left: -200%;
+}
+
+#img_3:checked ~ footer label[for="img_3"] > .label-point{
+    background:none;
+    border: 2px solid rgb(62, 138, 226);
+}
+
+#img_3:checked ~ footer label[for="img_3"]:hover > .label-point{
+    background:none;
+    border: 2px solid white;
+}
+
+#img_3:checked ~ footer label[for="img_3"]:active > .label-point{
+    background:none;
+    border: 2px solid rgb(195, 195, 195);
+}
+
+
+
+
+#img_4:checked ~.img-container .img-slider{
+    margin-left: -300%;
+}
+#img_4:checked ~ footer .descr-container .descr-slider{
+    margin-left: -300%;
+}
+
+#img_4:checked ~ footer label[for="img_4"] > .label-point{
+    background:none;
+    border: 2px solid rgb(62, 138, 226);
+}
+
+#img_4:checked ~ footer label[for="img_4"]:hover > .label-point{
+    background:none;
+    border: 2px solid white;
+}
+
+#img_4:checked ~ footer label[for="img_4"]:active > .label-point{
+    background:none;
+    border: 2px solid rgb(195, 195, 195);
+}
+
 
 
 
