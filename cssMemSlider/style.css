@@ -18,7 +18,6 @@ body{
 }
 .img-container{
     width: 100%;
-    background-color: red;
     overflow: hidden;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -42,7 +41,6 @@ footer{
 .descr-container{
     width: 75%;
     height: 100%;
-    background-color: rgb(162, 222, 255);
     overflow: hidden;
 }
 .descr-slider{
@@ -54,14 +52,54 @@ footer{
 .descr{
     width: 25%;
     height: 100%;
+    color: white;
 }
 
 
 .controlls-container{
     width: 25%;
     height: 100%;
-    background-color: rgb(184, 162, 255);
+    display: flex;
+    justify-content: flex-end;
 }
+input{
+    display: none;
+}
+
+label{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+}
+.label-point{
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: rgb(62, 138, 226);
+}
+
+input:checked ~ label>.label-point{
+    background:none;
+    border: 2px solid rgb(62, 138, 226);
+}
+label:hover>.label-point{
+    background:white;
+}
+label:active>.label-point{
+    background:rgb(195, 195, 195);
+}
+input:checked ~ label:hover>.label-point{
+    background:none;
+    border: 2px solid white;
+}
+input:checked ~ label:active>.label-point{
+    background:none;
+    border: 2px solid rgb(195, 195, 195);;
+}
+
+
 
 
 @media screen and (max-width: 320px) {
@@ -78,7 +116,15 @@ footer{
     .controlls-container{
         width: 100%;
         margin-bottom: 20px;
-        /* height: auto; */
+        height: auto;
+        justify-content: center;
     }
-
+    label{
+        width: 20px;
+        height: 20px;
+    }
+    .label-point{
+        width: 10px;
+        height: 10px;
+    }
 }
