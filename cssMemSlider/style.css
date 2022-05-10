@@ -1,0 +1,227 @@
+ *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.wrapper{
+    height: 100%;
+    background-color:#303030;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+.img-container{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+.img-slider{
+    width: 400%;
+    display: flex;
+    transition-duration: 0.5s;
+}
+img{
+    width: 25%;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 20%;
+    display: flex;
+}
+.descr-container{
+    width: 75%;
+    height: 100%;
+    overflow: hidden;
+}
+.descr-slider{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition-duration: 0.5s;
+}
+.descr{
+    font-size: 2.5vw;
+    width: 25%;
+    height: 100%;
+    color: white;
+}
+
+
+.controlls-container{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+input{
+    height: 0rem;
+    height: 0rem;
+    visibility: hidden;
+}
+
+label{
+    width: 3vw;
+    height:  3vw;
+    display: flex;
+    cursor: pointer;
+}
+.label-point{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    background: rgb(62, 138, 226);
+}
+
+label:hover>.label-point{
+    background:white;
+}
+label:active>.label-point{
+    background:rgb(195, 195, 195);
+}
+
+
+
+
+
+
+#img_1:checked ~.img-container .img-slider{
+    margin-left: 0%;
+}
+#img_1:checked ~ footer .descr-container .descr-slider{
+    margin-left: 0%;
+}
+
+#img_1:checked ~ footer label[for="img_1"] > .label-point{
+    background:none;
+    border: 0.3vw solid rgb(62, 138, 226);
+}
+
+#img_1:checked ~ footer label[for="img_1"]:hover > .label-point{
+    background:none;
+    border: 0.3vw solid white;
+}
+
+#img_1:checked ~ footer label[for="img_1"]:active > .label-point{
+    background:none;
+    border: 0.3vw solid rgb(195, 195, 195);
+}
+
+
+
+
+#img_2:checked ~.img-container .img-slider{
+    margin-left: -100%;
+}
+#img_2:checked ~ footer .descr-container .descr-slider{
+    margin-left: -100%;
+}
+
+#img_2:checked ~ footer label[for="img_2"] > .label-point{
+    background:none;
+    border: 0.3vw solid rgb(62, 138, 226);
+}
+
+#img_2:checked ~ footer label[for="img_2"]:hover > .label-point{
+    background:none;
+    border: 0.3vw solid white;
+}
+
+#img_2:checked ~ footer label[for="img_2"]:active > .label-point{
+    background:none;
+    border: 0.3vw solid rgb(195, 195, 195);
+}
+
+
+
+
+#img_3:checked ~.img-container .img-slider{
+    margin-left: -200%;
+}
+#img_3:checked ~ footer .descr-container .descr-slider{
+    margin-left: -200%;
+}
+
+#img_3:checked ~ footer label[for="img_3"] > .label-point{
+    background:none;
+    border: 0.3vw solid rgb(62, 138, 226);
+}
+
+#img_3:checked ~ footer label[for="img_3"]:hover > .label-point{
+    background:none;
+    border: 0.3vw solid white;
+}
+
+#img_3:checked ~ footer label[for="img_3"]:active > .label-point{
+    background:none;
+    border: 0.3vw solid rgb(195, 195, 195);
+}
+
+
+
+
+#img_4:checked ~.img-container .img-slider{
+    margin-left: -300%;
+}
+#img_4:checked ~ footer .descr-container .descr-slider{
+    margin-left: -300%;
+}
+
+#img_4:checked ~ footer label[for="img_4"] > .label-point{
+    background:none;
+    border: 0.3vw solid rgb(62, 138, 226);
+}
+
+#img_4:checked ~ footer label[for="img_4"]:hover > .label-point{
+    background:none;
+    border: 0.3vw solid white;
+}
+
+#img_4:checked ~ footer label[for="img_4"]:active > .label-point{
+    background:none;
+    border: 0.3vw solid rgb(195, 195, 195);
+}
+
+
+
+
+
+@media screen and (max-width: 320px) {
+    .wrapper{
+        width: 90%;
+        margin: auto;
+        padding: 1rem;
+    }
+    footer{
+        flex-direction: column-reverse;
+    }
+    .descr-container{
+        width: 100%;
+    }
+    .descr{
+        font-size: 5vw;
+    }
+    .controlls-container{
+        width: 100%;
+        margin-bottom: 1.5rem;
+        height: auto;
+        justify-content: center;
+    }
+    .img-container{
+        border-radius: 1rem;
+    }
+    label{
+        width: 7vw;
+        height: 7vw;
+    }
+}
